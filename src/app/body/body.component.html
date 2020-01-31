@@ -1,0 +1,124 @@
+<div id="app-body"class="app-body">
+    <p-toast [style]="{marginTop: '80px'}"></p-toast>
+    <div class="container-1 ui-g-12 ui-md-12 ui-lg-12 padding-0">
+        <div class="company-means-c ui-g-12 ui-md-6 ui-lg-6 padding-0">
+            <div class="company-means">
+                <h1>LR Cleaning Service</h1>
+                <span class="company-offer-text text">Request a estimate, and get accessible prices for each service type be it an apartment, house or office.</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-2 ui-g-12 ui-md-12 ui-lg-12 float-n">
+        <div class="company-offer-c ui-g-12 ui-md-12 ui-lg-12 float-n">
+            <div class="company-offer">
+                <h2>Get your discount</h2>
+                <span class="company-offer-text text">Share us a contact that you know probably has interest in our service and obtain a discount in your next cleaning.</span>
+                <div class="ui-g-12 ui-md-4 ui-md-offset-4 mt-2">
+                    <button pButton type="button" label="GET YOUR 10% OFF" (click)="showDialog()" class="rounded-button ui-button-rounded"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-3 ui-g-12 ui-md-12 ui-lg-12 padding-0">
+        <div class="company-services-c ui-g-12 ui-md-12 ui-lg-12 padding-0">
+            <div class="company-services ui-g-12 ui-md-12 ui-lg-12 padding-0">
+                <h2>Our Services</h2>
+                <div class="company-services-items ui-g-12 ui-md-12 ui-lg-12 padding-0">
+                    <app-service class="ui-g-12 ui-md-12 ui-lg-12 padding-0"
+                    direction="LEFT"
+                    [serviceList]="serviceList"
+                    ></app-service>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-4 ui-g-12 ui-md-12 ui-lg-12">
+        <div class="company-steps-c ui-g-12 ui-md-12 ui-lg-12">
+            <div class="company-steps ui-g-12 ui-md-12 ui-lg-12">
+                <h2>Live The Experience With Us</h2>
+                <div class="company-steps-items ui-g-12 ui-md-12 ui-lg-12">
+                    <app-step class="ui-g-12 ui-md-12 ui-lg-4"
+                    label="Schedule a cleaning service" 
+                    content="Schedule a service via email or by phone, we will go promptly to provide the service."
+                    image="assets/img/icon-01.svg"
+                    ></app-step>
+
+                    <app-step class="ui-g-12 ui-md-12 ui-lg-4"
+                    label="Relax and enjoy your time" 
+                    content="Feel confident that the care and cleanliness of your home will be in professional hands."
+                    image="assets/img/icon-02.svg"
+                    ></app-step>
+
+                    <app-step class="ui-g-12 ui-md-12 ui-lg-4"
+                    label="Trust warranty & Recomending" 
+                    content="All our services are 100% guaranteed and validated with our clients."
+                    image="assets/img/icon-03.svg"
+                    ></app-step>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-5 ui-g-12 ui-md-12 ui-lg-12 padding-0">
+        <div class="company-contact-c">
+            <div class="company-contact-image ui-g-12 ui-md-6 ui-lg-6 padding-0">
+                <div class="contact-image"></div>
+            </div>
+            <div class="company-contact-email ui-g-12 ui-md-6 ui-lg-6 float-n">
+                <div class="company-contact-data">
+                    <h2>Contact</h2>
+                    <span class="company-offer-text text">Send your phone or email, We will contact you.</span>
+                    <form [formGroup]="userformContact"  novalidate (ngSubmit)="onSubmitContact()" #myNgContactForm class="form-contact">
+                        <div>
+                            <div class="ui-g-12 ui-md-12 ui-lg-12">
+                                <input pInputText type="text" formControlName="phoneOrEmail" [placeholder]="getPlaceHolderFormContact('phoneOrEmail')"/>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ui-g-12 ui-md-12 ui-lg-12 padding-lr-0">
+                                <button pButton type="submit" label="Contact" [disabled]="!userformContact.valid" class="rounded-button ui-button-rounded"></button>
+                            </div>
+                                
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p-dialog [(visible)]="display" modal=true blockScroll=true dismissableMask=true [showHeader]=true [focusOnShow]=true (onHide)=onHide()>
+       
+        <div class="company-dicount-data">
+            <h2>Recomend someone and get your discount.</h2 >
+            <span class="company-offer-text text">Fill the register and obtain 10% off in your next service, additionally we will give 20% off to your recommendation in the first service.</span>
+           
+            <form  [formGroup]="userformRecommendation" (ngSubmit)="onSubmitRecommendation()" #myNgRecommendationForm class="mt-2 form">
+                <div>
+                    <div class="ui-g-12 ui-md-12 ui-lg-12">
+                        <input pInputText type="text" formControlName="recommenderName" [placeholder]="getPlaceHolderFormRecommendation('recommenderName')"/>
+                    </div>
+                    <div class="ui-g-12 ui-md-12 ui-lg-12">
+                        <input pInputText type="text" formControlName="recommenderPhoneOrEmail" [placeholder]="getPlaceHolderFormRecommendation('recommenderPhoneOrEmail')"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="ui-g-12 ui-md-12 ui-lg-12">
+                        <input pInputText type="text" formControlName="recommendedName" [placeholder]="getPlaceHolderFormRecommendation('recommendedName')"/>
+                    </div>
+                    <div class="ui-g-12 ui-md-12 ui-lg-12">
+                        <input pInputText type="text" formControlName="recommendedPhoneOrEmail" [placeholder]="getPlaceHolderFormRecommendation('recommendedPhoneOrEmail')"/>
+                    </div>
+                </div>
+                <div class="ui-g-12 ui-md-12 ui-lg-12 mt-1">
+                    <span class="undo-button" (click)=formRecommendationReset()>
+                        <fa class="undo-icon" name="trash" size="lg"></fa>
+                    </span>
+                    <div class="ui-g-12 ui-md-12 ui-lg-12">
+                        <button pButton type="submit" label="GET MY 10% OFF" [disabled]="!userformRecommendation.valid" class="rounded-button ui-button-rounded float-r"></button>
+                    </div>
+                        
+                </div>
+            </form>
+        </div>
+
+    </p-dialog>
+</div>

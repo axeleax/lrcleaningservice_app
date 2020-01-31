@@ -1,0 +1,144 @@
+
+$font: Open Sans, sans-serif
+$blue:#02255a
+$white: #ffffff
+$pale-grey: #f8fbff
+$blak:#1d1d1d
+$turquoise-blue:#00c0d0
+$ocean-blue: rgba(0, 85, 184, 0.7)
+$red: #f8b7bd
+$green: #b7d8b7
+$yellow:#ffe399
+$red_solid: #e91224
+$green_solid: #34A835
+$yellow_solid:#ffba01
+
+body
+    font-family: $font
+    background-color: $white
+
+body a 
+    color: $turquoise-blue !important
+
+.title
+    color: $blue
+
+.inline
+    display: inline-block
+
+H1, H2, H3, H4
+    color: $blue
+.mt-1
+    margin-top: 1em !important
+.mb-1
+    margin-bottom: 1em !important
+.ml-1
+    margin-left: 1em !important
+.mr-1
+    margin-right: 1em !important
+
+.mt-2
+    margin-top: 2em !important
+.mb-2
+    margin-bottom: 2em !important
+.ml-2
+    margin-left: 2em !important
+.mr-2
+    margin-right: 2em !important
+
+.float-n
+    float: none
+.float-r
+    float: right
+.float-l
+    float: left
+
+.text
+    color: $blak
+
+.ui-button
+    background-color: $turquoise-blue!important
+    border: 1px solid $turquoise-blue!important
+    color: $white!important
+    :enabled:hover 
+        background-color: $turquoise-blue !important
+        color: $white
+        border-color: $turquoise-blue !important
+    :active:hover 
+        opacity: 80%
+
+.social-facebock.ui-button
+    background-color: $ocean-blue!important
+    border: 1px solid $ocean-blue!important
+    color: $white!important
+    width: 30px
+    height: 30px
+    border-radius: 25px
+    :enabled:hover 
+        background-color: $ocean-blue !important
+        color: $white
+        border-color: $ocean-blue !important
+    :active:hover 
+        opacity: 80%
+    .ui-button-text
+        padding: 0
+.social-instagram.ui-button
+    background-color: purple !important
+    border: 1px solid purple!important
+    color: $white!important
+    width: 30px
+    height: 30px
+    border-radius: 25px
+    :enabled:hover 
+        background-color: purple !important
+        color: $white
+        border-color: purple !important
+    :active:hover 
+        opacity: 80%
+    .ui-button-text
+        padding: 0
+.social-icon
+    i
+        padding-top: 7px
+        font-size: 20px
+
+.padding-0
+    padding: 0 !important
+.padding-t-0
+    padding-top: 0 !important
+.padding-lr-0
+    padding-left: 0 !important
+    padding-right: 0 !important
+.padding-lr-1
+    padding-left: 1 !important
+    padding-right: 1 !important
+
+.ui-message 
+    color: $white !important
+.ui-message-error 
+    .ui-message-icon 
+        padding-right: 5px
+        color: red !important
+
+form 
+    display: inline-block
+    position: relative
+
+.ui-inputtext
+    &.ng-dirty 
+        &.ng-invalid
+            background-color: $red
+
+.ui-toast 
+    .ui-toast-message.ui-toast-message-success 
+        background-color: $white !important
+        .ui-toast-summary
+            color: $blue !important
+        .ui-toast-icon
+            color: $green_solid !important
+    .ui-toast-message.ui-toast-message-warn 
+        background-color: $white !important
+        .ui-toast-summary
+            color: $blue !important
+        .ui-toast-icon
+            color: $yellow_solid !important

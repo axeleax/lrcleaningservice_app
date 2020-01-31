@@ -1,0 +1,16 @@
+<div id="app-service"class="app-service">
+    <div *ngFor="let service of serviceList" class="service-c">
+        <div *ngIf="getOrientation(service) =='LEFT'" class="company-service-image ui-g-12 ui-md-6 ui-lg-6 padding-0">
+            <div [ngClass]="service.image + ' image'"></div>
+        </div>
+        <div class="service-content ui-g-12 ui-md-6 ui-lg-6">
+            <h3>{{service.label}}</h3> 
+            <div class="service-subtitle">We have cleaning services for:</div>
+            <div class="service-detail">{{service.detail}}</div>
+        </div>
+        <div *ngIf="getOrientation(service)=='RIGHT'" class="company-service-image ui-g-12 ui-md-6 ui-lg-6 padding-0">
+            <div [ngClass]="service.image + ' image'"></div>
+        </div>
+    </div>
+</div>
+
