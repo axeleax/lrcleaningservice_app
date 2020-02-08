@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header/header.component';
 import { BodyComponent } from './body/body.component';
 import { StepComponent } from './body/step/step.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServicesComponent } from './body/services/services.component';
+import { ServiceComponent } from './body/services/service/service.component';
 
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
@@ -20,7 +22,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageModule } from 'primeng/message';
 import { DialogModule } from 'primeng/dialog';
 import { TabViewModule } from 'primeng/tabview';
-import { ServiceComponent } from './body/service/service.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ServiceComponent } from './body/service/service.component';
     BodyComponent,
     StepComponent,
     FooterComponent,
+    ServicesComponent,
     ServiceComponent
   ],
   imports: [

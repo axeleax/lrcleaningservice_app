@@ -1,0 +1,49 @@
+@import "../../../../styles.sass"
+#app-service
+    min-width: 216px
+    height: 290px
+    .service-c
+        .image
+            background-color: $pale-grey
+            width: 100%
+            height: 290px
+            display: table
+            position: relative
+            background-size: cover !important
+            width: 100%
+            overflow: hidden
+            border-radius: 8px
+            &:hover
+                .service-text
+                    transform: translate(100%,0)
+            .service-text
+                display: table-cell
+                vertical-align: middle
+                position: absolute
+                width: 100%
+                height: 290px
+                top: 0px
+                left: -100%
+                background-color: $blue
+                opacity: 90%
+                transition: all 1s ease-in-out
+                text-align: left
+                padding: 1.3em
+                color: $white
+                font-size: 16px
+                .service-label 
+                    font-size: 1.3em
+                    margin-top: 2em
+                .service-title
+                    margin: 1em 0
+
+                
+                    
+    .apartment
+        background: url("./../../../../assets/img/apartment.png") no-repeat center center
+    .house
+        background: url("./../../../../assets/img/house.png") no-repeat center center
+    .office
+        background: url("./../../../../assets/img/office.png") no-repeat center center
+    .potconstruction
+        background: url("./../../../../assets/img/potconstruction.jpg") no-repeat center center

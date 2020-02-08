@@ -10,7 +10,8 @@ export class HeaderComponent implements OnInit {
 
   scrWidth: number;
 
-  constructor() { }
+  constructor() {
+  }
 
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {

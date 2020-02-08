@@ -1,0 +1,11 @@
+<div id="app-services"class="app-services">
+    <div *ngFor="let service of serviceList" class="service-c">
+        <app-service class="company-service ui-g-12 ui-md-6 ui-lg-3"
+            [label]="service.label"
+            title="We have cleaning services for:"
+            [detail]="service.detail"
+            [image]="service.image"
+        ></app-service>
+    </div>
+</div>
+

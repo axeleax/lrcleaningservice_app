@@ -1,17 +1,16 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
-import { Service } from './service';
+import { Service } from './services';
 
 @Component({
-  selector: 'app-service',
-  templateUrl: './service.component.html',
-  styleUrls: ['./service.component.sass']
+  selector: 'app-services',
+  templateUrl: './services.component.html',
+  styleUrls: ['./services.component.sass']
 })
-export class ServiceComponent implements OnInit {
+export class ServicesComponent implements OnInit {
 
   @Input() serviceList: Service[];
 
   scrWidth: number;
-  selectedImage: string;
 
   constructor() {
   }

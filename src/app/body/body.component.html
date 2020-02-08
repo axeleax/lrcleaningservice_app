@@ -24,12 +24,10 @@
         <div class="company-services-c ui-g-12 ui-md-12 ui-lg-12 padding-0">
             <div class="company-services ui-g-12 ui-md-12 ui-lg-12 padding-0">
                 <h2>Our Services</h2>
-                <div class="company-services-items ui-g-12 ui-md-12 ui-lg-12 padding-0">
-                    <app-service class="ui-g-12 ui-md-12 ui-lg-12 padding-0"
-                    direction="LEFT"
-                    [serviceList]="serviceList"
-                    ></app-service>
-                </div>
+                    <app-services class="company-services-items ui-g-12 ui-md-12 ui-lg-12 padding-0"
+                        direction="LEFT"
+                        [serviceList]="serviceList">
+                    </app-services>
             </div>
         </div>
     </div>

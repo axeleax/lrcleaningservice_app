@@ -3,7 +3,7 @@ import { Validators, FormControl, FormGroup, FormBuilder, NgForm } from '@angula
 import { MessageService } from 'primeng/api';
 import { EmalService } from '../service/emal.service';
 import { Emal } from '../service/email';
-import { Service } from './service/service';
+import { Service } from './services/services';
 
 @Component({
   selector: 'app-body',
