@@ -11,7 +11,7 @@ import { Resp } from './resp';
 export class EmalService {
 
   // Base url
-  baseurl = 'https://www.lrcleaningservice.us:8080';
+  baseurl = 'https://lrcleaningservice.us:8080';
 
   constructor(private http: HttpClient) { }
 
